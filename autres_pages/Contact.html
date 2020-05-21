@@ -1,0 +1,178 @@
+
+
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>la page de contact</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+	<body onLoad="chargerActivite();">
+
+	<body>
+			
+		<div id ="conteneur"> <!--le conteneur de notre page web qui contiendra les autres elements -->
+
+		    <div id="banniere">	<!--la banniere de notre page web qui va representer les representants -->	   	
+		      
+			     <img src="../image/logo.jpg" alt="logo de l'entreprise" name="logo"> <!--le logo de l'entreprise de notre page web -->
+
+			     <div id="recherche"> <!--la barre recherche de notre page web -->
+		
+		             <input type="text"  ><label for="recherche">Rechercher</label> <!--  ajout d'un zone de texte pour la recherche       -->
+
+		         </div><!--fin du recherche       -->
+
+	        </div> <!-- fin du div banniere        -->
+
+	
+
+	        <div id="barre_menu"> <!--la barre du menu de notre page web -->
+
+			     <ul> <!-- une liste non ordonnée pour creer le nemu principal        -->
+
+					<li><a  class="onglet"  href="../index.html" >Accueil </a></li> <!-- ajout des differents onglets         -->
+					<li><a  class="onglet"  href="Blog.html" >Blog</a></li>
+					<li><a  class="onglet"  href="Login.html">Login</a></li>					
+					<li><a  class="onglet"  href="Contact.html">Contact</a></li>
+
+			     </ul> <!--fin ul         -->
+
+	         </div><!--fin de la barres de menu         -->
+
+		     <div id="corps"><!-- debut du corps de la page         -->
+
+		         <form method="post" action="#"> <!--ajout d'un formulaire         -->
+
+			        <fieldset> <!--ajout d'un cadre pour les zone de saisies         -->
+
+			        	<fieldset>
+				
+          		            <legend> Enregistrement client</legend><!--ajout d'une legende         -->
+
+            			   		 <label for="nom">Nom :</label><input type="text" name="nom" id="nom"><br><br><!-- ajout des zones de texte   -->
+
+            			    	 <label for="prenom">prénom :</label><input type="text" name="prenom" id="prenom"><br><br>
+
+          			             <label for="entreprise">Nom Entreprise :</label><input type="text" name="entreprise" id="entreprise"><br><br>
+
+                                 <label for="postal">Code postal :</label><input type="text" name="postal" id="postal"><br><br>
+
+                                 <label for="adresse">Adresse :</label><input type="text" name="adresse" id="adresse"><br><br>
+
+                                 <label for="telephone">Téléphone :</label><input type="text" name="telephone" id="telephone"><br><br>
+
+                                 <label for="Email">Email :</label><input type="Email" name="Email" id="Email"><br><br>
+
+                                <input type="radio" name="sexe"><label for="Homme">Homme</label><input type="radio" name="sexe"><label>Femme</label>
+
+			            </fieldset> <!--fin du cadre         -->
+                        <br>
+			            <fieldset> <!-- de d'un cadre pour passer la commande         -->
+                            <legend>commande</legend>
+		                     <h3> passer une commande</h3>
+
+                            <label for="choix">Choisir:</label>
+
+                            <h3>Activite</h3>
+
+			                 <select id="activite" onChange="charger();">
+
+				                 <option>choisir l'activite</option>
+
+				             </select>
+
+				             <h3>Service</h3>
+
+				             <select id="service"  onChange="afficher();">
+
+					             <option>Choisir le sevice</option>
+			                 </select>
+                             <br>
+			                 <textarea id="ttrea"> </textarea>
+
+			             </fieldset>
+                       <input type="submit" value="Envoyer">
+	             </form>
+
+		     </div><!-- fin div corp        -->
+
+		     <div id="zone_publicite"> <!-- debut div publicite        -->		
+        
+ 			     <div class="d1"></div><!--pour les image         -->
+		 			 	
+ 	         </div>
+
+	
+		    <div id="pieds"><!-- debut div corp         -->
+
+		    	<p id="reference">Nom:Hourizene <br> Prénoms:Guy Camille <br>Email:hourizene@yahoo.fr<p>
+
+		    </div>	<!-- fin div corps        -->
+
+    
+        </div><!--fin div corp        -->
+
+         <script type="text/javascript" language="javascript">
+
+	     var tabPV=new Array(); /** un tableau d'activite */
+
+		 tabPV["Vente"]=new Array();/**premiere ligne du tableau*/
+		 tabPV["Vente"][0]="matieriels Hewlett-Packard";/**les colonnes du tableau*/		
+         tabPV["Vente"][1]="matieriels DELL";
+         tabPV["Vente"][2]="matieriels Lenovo";
+         tabPV["Vente"][3]="matieriels Apple"
+         tabPV["Vente"][4]=" matieriels Acer"
+
+         tabPV["Service"]=new Array();/** deuxieme ligne du tableau */
+
+         tabPV["Service"][0]="Installation de reseaux";
+         tabPV["Service"][1]="Depannage de matieriels";
+         tabPV["Service"][2]="Conseils informatique";
+         tabPV["Service"][3]="Formation"
+
+
+         function chargerActivite(){//pour changer d'activité
+
+	        var activite=document.getElementById('activite');//on cible la base select
+ 
+	        var pr;
+
+	       for(pr in tabPV){ //foreach pour parcourir le tableau
+
+		      activite.options[activite.options.length]=new Option(pr);
+
+	       }
+
+         }
+
+         function charger(){
+    
+	        var activite=document.getElementById('activite');
+	        var service=document.getElementById('service');
+	        var actiChoisie=activite.options[activite.selectedIndex].text;
+	        var tab=tabPV[actiChoisie];         
+
+	         var vl;
+	
+	         for(vl=0;vl<tab.length;vl++){
+
+		       service.options[service.options.length]=new Option(tab[vl],tab[vl]);
+	         }
+   
+         }
+
+          function afficher(){
+
+	       var service=document.getElementById('service');
+	       document.getElementById("ttrea").value += (service.options[service.selectedIndex].text+ "   ");
+          }
+
+         </script>
+   
+          </body>
+</html>
+	
+	
+
+

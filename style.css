@@ -1,0 +1,268 @@
+/*mise en forme du haut de page*/
+
+body{
+	background:gray;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+/*mise en forme du conteneur*/
+#conteneur{
+font-family: 'Source Serif Pro', serif;
+width:1600px;
+height:1280px;
+background:#C0C0C0;
+margin:0px;
+
+}
+
+/*mise en forme de la banniere*/
+#banniere{
+width:100%;
+height:100px;
+background-color:#BDB76B;	
+margin:0px;
+margin-top:0px;
+
+}
+
+/*mise en forme du logo*/
+
+#logo{
+float:left;
+width: 20%;
+border: 1px solid red;
+}
+/**mise en forme du nom de l'entreprise*/
+#NomEntreprise{
+ display: inline;
+ color:#000080;
+ font-size: 35px;
+
+}
+/**
+*mise en forme de la zone de recherche
+*/
+#recherche{
+
+float:right;
+width: 20%;
+margin-top:5px;
+
+}
+
+/**mise en forme du label de la zone de recherche**/ 
+#recherche input{ 
+
+  width:150px;
+  float:left;
+  margin:0px;
+}
+
+/**mise en forme du label de la zone de recherche**/ 
+#recherche label{
+
+   
+  font-weight: bold;
+  font-size:x-large;
+}
+
+
+/*mise du menu */
+
+#barre_menu{
+
+float: left;
+margin:0px;
+width:100%;
+height:60px;
+background-color:#24445C;
+border:solid 1px;
+}
+
+
+/*mise en forme de L'element ul pour afficher la barre d'outils*/
+ul{
+	list-style-type: none;	
+    width:100%
+    height: 100px;
+    margin:0px;
+}
+
+/**mise en forme des onglets du menu*/
+li a {
+	display:inline;
+	float:left;
+	font-size:20pt;	
+	color: black;
+	text-decoration: none;
+    width:20%;
+}
+a.onglet:hover{
+	color:white;
+}
+
+/**mise en forme du corps de la page*/
+#corps{
+float:left;
+display:inline;
+width:88%;
+height:1300px;
+margin-right:0px;
+background:#BBD2E1;
+}
+
+#video{
+
+  width:301px;
+  height: 230;
+  margin: 0px;
+  padding: 0px;
+}
+/*mise en forme de la video*/
+video{
+
+  width: 300px;
+  height: 220px;
+
+}
+/*mise en forme du titre*/
+.titre{
+    background: #048B9A;
+	font-size:25pt;
+	font-weight: bold;
+	color:white;
+}
+
+/**mise en forme de la zone de publicite*/
+#zone_publicite{
+float:right;
+margin-left:0px;
+width:11%;
+height:1300px;
+background:red;
+border:solid 1px;
+
+overflow: hidden;
+margin:0px auto;
+ box-shadow: 0px 15px 10px -5px #777;
+}
+/**mise en forme du pieds de page*/
+#pieds{
+display:inline-block;
+width:100%;
+height:180px;
+margin:0px;
+background:#2F4F4F;
+border:1px solid black;
+margin:0px;
+
+}
+
+/**mise en forme des h2*/
+
+h2{
+    
+	color: blue;
+	font-size:25pt;
+}
+
+
+
+/**mise en forme du paragraphe*/
+#description{
+
+color: gray;
+font-size:20pt;
+font-family: Aldhabi;
+}
+
+/**mise en forme du tableau*/
+table{
+  border-collapse: collapse;
+}
+
+/**mise en forme des lignes et des colonnes*/
+th, td{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius:5px;
+}
+
+/**mise en forme des h1*/
+h1{
+	font-size:30pt;
+	color: blue;
+}
+
+/**mise en forme des imputs*/
+input{
+	margin-bottom: 3px;
+}
+/**mise en forme des label*/
+label{
+	margin-bottom: 3px;
+
+}
+/**mise en des objets ayant pour id reference*/
+#reference{
+
+
+	color: blue;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/**mise des image de la zone du publicité*/
+.conteneur1{
+    overflow: hidden;
+    max-width: ;
+    margin:0px auto;
+    box-shadow: 0px 15px 10px -5px #777;
+}
+.d1{
+    width: 2650px;
+    height: 1300px;
+    background-color: #EDEDED;
+    background-image: url("image/diapo.jpg");
+    background-size: contain;
+    animation: defilement1 12s linear infinite;
+}
+@keyframes defilement1{
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-2880px,0);}
+}
+
+.d1:hover{
+    animation-play-state: paused;
+}
+
+/*mise en des objets de la du blog ayant pour class paraBlog*/
+
+.ParaBlog{
+
+    font-size:15px;
+    font-family:"Century Gothic"
+    color:red;
+}
+
+/*mise en des objets de la du blog ayant pour class liBlog*/
+.liBlog{
+
+	display:block;
+	float:none;
+	font-size:12pt;
+	font-family:"Abadi";
+	color:blue;
+	text-decoration:none;    
+
+}
+
+/*mise en de l'objets textarea  dans contact*/
+textarea{
+    
+    width: 500px;
+    height: 100px;
+
+
+}

@@ -1,0 +1,118 @@
+
+
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title> Page de login</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+
+		
+	</head>
+
+	<body>
+			
+		<div id ="conteneur"> <!--le conteneur de notre page web qui contiendra les autres elements -->
+
+		    <div id="banniere">	<!--la banniere de notre page web qui va representer les representants -->	   	
+		      
+			     <img src="../image/logo.jpg" alt="logo de l'entreprise" name="logo"> <!--le logo de l'entreprise de notre page web -->
+
+			    <div id="recherche"> <!--la barre recherche de notre page web -->
+		
+		            <input type="text"  ><label for="recherche">Rechercher</label>
+
+		        </div>
+
+	        </div>
+
+	
+
+	        <div id="barre_menu"> <!--la barre du menu de notre page web -->
+			    <ul>
+					 <li><a  class="onglet"  href="../index.html" >Accueil </a></li>
+					 <li><a  class="onglet"  href="Blog.html" >Blog</a></li>
+					 <li><a  class="onglet"  href="Login.html">Login</a></li>					
+					 <li><a  class="onglet"  href="Contact.html">Contact</a></li>
+ 
+			     </ul>
+	         </div>
+
+
+	        <div id="corps"><!--corps de la page web-->
+
+               <form method="post" action="#">
+				 <h3>page de login</h3>
+
+				 <fieldset><!--on encadre la zone de login-->
+
+					 <legend>Entrez votre login</legend>
+
+					 <label for="mail">Mon utilisation</label><input type="Email" name="mail" id="mail" placeholder="utilisation@domaine.fr" required> <br>
+
+					 <label for="motPasse">Mot de passe</><input type="password" name="motPasse" id="motPasse" required > <br>
+
+					 <button  id="BoutonValider"> Soumttre</button>   
+
+                 </fieldset>
+                 </form>
+		     </div> 
+
+
+
+	         <div id="zone_publicite"><!-- la zone de la publicité-->		 
+		
+     	         <div class="conteneur1">
+
+ 					 <div class="d1"> 
+ 			         </div>
+
+                </div> 	
+
+	         </div>	
+
+
+
+	         <div id="pieds">
+
+		        <p id="reference">Nom:Hourizene <br> Prénoms:Guy Camille <br>Email:hourizene@yahoo.fr<p>
+	         </div>	
+
+    
+         </div>
+            
+
+     <script type="text/javascript" language="javascript">
+			
+	     var Vmail = document.getElementById("mail");
+
+		 var Vmot = document.getElementById("motPasse");
+
+		 var BtValider = document.getElementById("BoutonValider");
+
+		 document.getElementById("BoutonValider").addEventListener("click",function()
+		 {
+
+                  
+		    if((Vmail.value==="najoua.ghrieb@bdeb.qc.ca" ) && (Vmot.value === "najoua")){
+
+                 console.log("Bienvenue professeur najoua");
+			}
+			else{
+
+				console.log("veuillez vous indentifier");
+			}
+		    }
+         )
+			
+	</script>
+
+</body>
+
+
+</html>
+
+
+
+

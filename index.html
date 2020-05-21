@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accueil</title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Source+Sans+Pro:wght@200&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+</head>
+<body >
+	<div id ="conteneur"> <!--le conteneur de notre page web qui contiendra les autres elements -->
+
+		<div id="banniere">	<!--la banniere de notre page web qui va representer les representants -->	   	
+		      
+			 <img src="image/logo.jpg" alt="logo de l'entreprise" name="logo"> <!--le logo de l'entreprise de notre page web -->
+            
+             <p id="NomEntreprise">Entreprise de service informatique HHL</p><!--titre de l'entreprise-->
+
+			 <div id="recherche"> <!--la barre recherche de notre page web -->
+		
+		        <input type="search" id="maRecherche" name="q"placeholder="Recherche sur le site…" required>
+
+                <button >Rechercher</button> 
+
+		     </div> 	
+		     
+
+	     </div><!-- fin du bannier-->
+
+	
+
+     	<div id="barre_menu"> <!--la barre du menu de notre page web -->
+
+			<ul> <!-- pour faire le menu-->
+					<li><a  class="onglet"  href="index.html" >Accueil </a></li>
+					<li><a  class="onglet"  href="autres_pages/Blog.html" >Blog</a></li>
+					<li><a  class="onglet"  href="autres_pages/Login.html">Login</a></li>					
+					<li><a  class="onglet"  href="autres_pages/Contact.html">Contact</a></li>
+
+			</ul>
+
+		     <label>La date actuelle:</label> <input type="text" name="he" id="he">
+
+	    </div> <!-- fin du barre de menu-->
+
+        
+
+
+		<div id="corps"><!--le corps de notre page web -->
+
+
+			<h2>HHL technologies informatiques</h2>
+			<br>
+			<p id="description">depuis 2020 l'entreprise HHl oeuvre dans le domaine l'informatique.nous operons dans le domaine de conception d'application dans vente du materiels informatiques dans le d'installation du reseau informatique et depannage reseau informatique et depannage et aussi de conseils et services après vente.<br> Notre equipe est composée de specialistes prêts à vous servir.
+			Nous encourageons aussi les petites entreprises à nous contacter pour la vente des produits en produits en lignes.
+
+		    </p>
+		         <div id="video">
+                     <video controls="muted" poster="image/photo_Mark.jpg" > <!--insertion de la video-->
+
+               	         <source src="image/video_entreprise.mp4" type="video/mp4">
+               	 
+                    	À chacun son entreprise
+                    </video>
+                </div>
+
+            <br>
+             <table  id="tableImage" > <!--tableau qui contient mes images-->
+	        
+	 	 	    <tr><!-- premiere ligne-->
+	 	 		     <td colspan="4" class="titre">Vente de metriels informatiques</td> 
+	 	 	     </tr>
+	 	 	     <tr><!--deuxieme ligne-->
+	 	 		     <td><a href="autres_pages/Blog.html"><img src="image/imprimante.jpg" alt ="une imprimante" class="image"></a></td>
+	 	 		      <td><a href="autres_pages/Blog.html"><img src="image/ordinateur.jpg" alt ="un ordinateur"  class="image"></a></td>
+	 	 		      <td><a href="autres_pages/Blog.html"><img src="image/serveur.jpg"    alt="un serveur"        class="image"></a></td>
+	 	 		     <td><a href="autres_pages/Blog.html"><img src="image/ordinateur_portable.jpg"  alt="un ordinateur portable" class="image"></a></td>
+	 	 
+	 	 	     </tr>
+	 	 
+	 	         <tr>
+	 	 	          <td colspan="4" class="titre">servive et conseils informatiques</td> 
+	 	         </tr>
+	 	         <tr>
+	 	 		     <td><a href="autres_pages/Contact.html"><img src="image/programme.jpg" alt ="image d'une imprimante" class="image"></a></td>
+	 	 		     <td><a href="autres_pages/Contact.html"><img src="image/reseau.jpg" alt ="image d'un ordinateur class="image"></a></td>
+	 	 		     <td><a href="autres_pages/Contact.html"><img src="image/reparation.jpg"  alt="image d'un serveur" class="image"></a></td>
+	 	 		     <td><a href="autres_pages/Contact.html"><img src="image/conseil.jpg"  alt="image d'un ordinateur portable" class="image"></a></td>
+	 	          </tr>
+
+             </table>
+
+	     </div>
+
+	     <div id="zone_publicite">		
+        
+ 			 <div class="d1"></div>
+		 			 	
+ 	     </div>
+
+	      </div>	
+	     <div id="pieds">
+		
+		     <p id="reference">Nom:Hourizene <br> Prénoms:Guy Camille <br>Email:hourizene@yahoo.fr<p>
+	    </div>	
+       
+    
+     </div><!--fin conteneur-->
+
+    <script type="text/javascript" language="javascript">
+
+
+         var cejour = new Date();
+
+        document.getElementById("he").value =( cejour.getDate() + '/'+ (cejour.getMonth()+1) + '/' + cejour.getYear())
+         //getDate retoune le jour du Mois, getMonth() retourne Mois de l’année(0=Janvier,1=Février,etc..)
+
+     </script>
+
+
+
+</body>
+</html>
+
+
+
